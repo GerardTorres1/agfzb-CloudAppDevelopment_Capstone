@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* Style sheet for Best Cars */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0099ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Add your own header and navigation here -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand " href="{% url 'djangoapp:index' %}">Best cars</a>
+            </div>
+            <ul class="nav navbar-header">
+                <li class="btn btn-link"><a href="{% url 'djangoapp:about' %}">About Us</a></li>
+                <li class="btn btn-link"><a href="{% url 'djangoapp:contact' %}">Contact Us</a></li>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h1>About Us</h1>
+        <p>Welcome to Best Cars dealership, home to the best cars in North America. We sell domestic and imported cars
+            at
+            reasonable prices.</p>
+        <p>Best Cars is a car dealership that offers a wide range of new and used cars at affordable prices. We have
+            been in business since 2020 and we are committed to providing excellent customer service and satisfaction.
+            Whether you are looking for a family car, a sports car, a luxury car or a truck, we have something for
+            everyone.</p>
+        <p>At Best Cars, we also offer financing options, trade-ins, warranties and maintenance services. Our friendly
+            and knowledgeable staff will help you find the perfect car for your needs and budget. You can browse our
+            inventory online or visit our showroom to see our cars in person.</p>
+        <p>We are located at 123 Main Street, Redmond, WA 98052. Our hours are Monday to Friday from 9 am to 6 pm,
+            Saturday from 10 am to 5 pm and Sunday from 11 am to 4 pm. You can also contact us by phone at (425)
+            555-1234 or by email at info@bestcars.com.</p>
+        <p>We look forward to hearing from you soon!</p>
+        <!-- Add your own footer here -->
+    </div>
+</body>
+
+</html>
