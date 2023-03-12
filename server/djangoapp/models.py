@@ -62,17 +62,58 @@ class CarModel(models.Model):
         return string
 
 # <HINT> Create a plain Python class `CarDealer` to hold dealer data
-""" class CarDealer(models.Model):
-    firstname = models.CharField(max_length=200)
-    lastname = models.CharField(max_length=200)
-    email = models.CharField(max_length=200)
-    phone = models.CharField(max_length=200)
-    addressline1 = models.CharField(max_length=200)
+
+
+class CarDealer:
+
+    def __init__(self, address, city, full_name, id, lat, long, short_name, st, zip):
+        # Dealer address
+        self.address = address
+        # Dealer city
+        self.city = city
+        # Dealer Full Name
+        self.full_name = full_name
+        # Dealer id
+        self.id = id
+        # Location lat
+        self.lat = lat
+        # Location long
+        self.long = long
+        # Dealer short name
+        self.short_name = short_name
+        # Dealer state
+        self.st = st
+        # Dealer zip
+        self.zip = zip
 
     def __str__(self):
-        string = self.firstname + " " + self.lastname + " " + self.email + " " + self.phone + " " + self.addressline1
-        return string """
+        return "Dealer name: " + self.full_name
 
 
 # <HINT> Create a plain Python class `DealerReview` to hold review data
-""" class DealerReview(models.Model): """
+class DealerReview(models.Model):
+
+    def __init__(self, dealership, name, purchase, review, purchase_date, car_make, car_model, car_year, sentiment, id):
+        # Dealership id
+        self.dealership = dealership
+        # Reviewer name
+        self.name = name
+        # Car purchase
+        self.purchase = purchase
+        # Review text
+        self.review = review
+        # Purchase date
+        self.purchase_date = purchase_date
+        # Car make
+        self.car_make = car_make
+        # Car model
+        self.car_model = car_model
+        # Car year
+        self.car_year = car_year
+        # Sentiment
+        self.sentiment = sentiment
+        # Review id
+        self.id = id
+
+    def __str__(self):
+        return "Delership: " + str(self.dealership) + " Review: " + str(self.review)
